@@ -1,5 +1,5 @@
 # Reinfocement Learning Classes repository
-This is the repository with the tasks from my Reinfocement Learning course. All the tasks are implemented in Python in Jupyter Notebooks. To solve the majority of the tasks it is recommended to listen to the lecture or watch the corresponding YouTube Video.
+This is the repository with the tasks from my Reinfocement Learning course. All the tasks are implemented in Python, most in Jupyter Notebooks. To solve the majority of the tasks it is recommended to listen to the lecture or watch the corresponding YouTube Video.
 
 In my course I am based on the great [*Reinforcement Learning: An Introduction* by R. S Sutton and A. G. Barto]( http://incompleteideas.net/book/the-book.html) book.
 
