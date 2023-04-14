@@ -3,7 +3,7 @@ from agents import SarsaAgent, QLearningAgent
 
 import gym
 
-parser = argparse.ArgumentParser(description='Runs TD(0) on Walking5-v0.')
+parser = argparse.ArgumentParser(description='Renders an environment using selected agent')
 
 parser.add_argument('-e', '--env',
                     type=str,
