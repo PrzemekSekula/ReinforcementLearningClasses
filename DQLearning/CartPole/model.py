@@ -22,6 +22,7 @@ class QNetwork(nn.Module):
         self.fc1 = None # ENTER YOUR CODE HERE
         self.fc2 = None # ENTER YOUR CODE HERE
         self.fc3 = None # ENTER YOUR CODE HERE
+        
     def forward(self, state):
         """Build a network that maps state -> action values.
         Args:
