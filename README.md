@@ -16,7 +16,9 @@ Generally speaking I am not publishing solutions here. If you need my solutions,
 - `MonteCarlo` - A Monte Carlo for the OpenAI [Black Jack environment](https://www.gymlibrary.dev/environments/toy_text/blackjack/)
 - `TD_0` - A Monte Carlo and TD(0) for the [Walking](https://github.com/PrzemekSekula/gym-walking) environment
 - `QLearning` - SARSA and Q-learning for both [Cliff Walking](https://www.gymlibrary.dev/environments/toy_text/cliff_walking/) and [Taxi](https://www.gymlibrary.dev/environments/toy_text/taxi/) environments
-- `DQLearning` - Deep Q Learning. For now only with the [Cart Pole](https://www.gymlibrary.dev/environments/classic_control/cart_pole/) (upgrades soon)
+- `DQLearning` - Deep Q Learning. For now it containes two environments (upgrades soon):
+    - [Cart Pole](https://www.gymlibrary.dev/environments/classic_control/cart_pole/) - Basic DQN taks
+    - [Mountain Car](https://www.gymlibrary.dev/environments/classic_control/mountain_car/) - Like the previous one, but with local and target neural networks
 
 
 
