@@ -40,6 +40,7 @@ class Agent():
         # Q-Network
         fc1, fc2 = 64, 16 # Size of the layers
         # TODO: Create a network with 2 hidden layers (fc1 and fc2 nodes)
+        # Remember to use .to(device) to move the network to the GPU        
         self.qnetwork = None # ENTER YOUR CODE HERE
         
         # TODO: Create the optimizer (Adam with learning rate lr)
@@ -97,10 +98,11 @@ class Agent():
         # Get max predicted Q values (for next states) from target model
         Q_targets_next = self.qnetwork(next_states).detach().max(1)[0].unsqueeze(1)
         # TODO: Compute Q targets for current states 
+        # You can use Q_targets_next * (1 - dones) to ensure that the value of the terminal state is 0
         Q_targets = None # ENTER YOUR CODE HERE
 
-        # TODO: Get expected Q values from local model
-        Q_expected = None # ENTER YOUR CODE HERE
+        Q_expected = self.local_network(states).gather(1, actions)
+
 
         # Compute loss
         loss = F.mse_loss(Q_expected, Q_targets)
@@ -116,6 +118,14 @@ class Agent():
             path (str): path to save the network. Default is 'checkpoint.pth'
         """
         torch.save(self.qnetwork.state_dict(), path)
+        
+    def load(self, path = 'checkpoint.pth'):
+        """Loads the network
+
+        Args:
+            path (str): path with the weights. Default is 'checkpoint.pth'
+        """
+        self.local_network.load_state_dict(torch.load(path))        
  
 class ReplayBuffer:
     """Fixed-size buffer to store experience tuples.

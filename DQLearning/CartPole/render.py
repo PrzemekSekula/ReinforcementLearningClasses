@@ -31,10 +31,6 @@ parser.add_argument('-m', '--max-steps',
                    )
 
 
-import torch
-
-
-
 if __name__ == "__main__":
     args = parser.parse_args()
     env = gym.make(args.env, render_mode = 'human')
@@ -48,7 +44,7 @@ if __name__ == "__main__":
         state_size=env.observation_space.shape[0], 
         action_size=env.action_space.n)
 
-    agent.qnetwork.load_state_dict(torch.load('checkpoint.pth'))
+    agent.load(args.checkpoint_path)
 
     state, info = env.reset()
     env.render()
