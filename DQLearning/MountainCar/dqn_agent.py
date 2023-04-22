@@ -44,6 +44,9 @@ class Agent():
         self.local_network = None # ENTER YOUR CODE HERE
         self.target_network = None # ENTER YOUR CODE HERE
         
+        # Target and local network should have the same weights:
+        self.target_hard_update()
+        
         # TODO: Create the optimizer (Adam with learning rate lr)
         self.optimizer = None # ENTER YOUR CODE HERE
 
@@ -97,7 +100,7 @@ class Agent():
         states, actions, rewards, next_states, dones = experiences
 
         # Get max predicted Q values (for next states) from target model
-        Q_targets_next = self.target_network(next_states).detach().max(1)[0].unsqueeze(1)
+        Q_targets_next = self.target_network(next_states).detach().max(dim = 1, keepdim=True)[0]
         # TODO: Compute Q targets for current states 
         # You can use Q_targets_next * (1 - dones) to ensure that the value of the terminal state is 0
         Q_targets = rewards + (self.gamma * Q_targets_next * (1 - dones))
@@ -111,13 +114,11 @@ class Agent():
         loss.backward()
         self.optimizer.step()
         
-    def update_target_network(self):
+    def target_hard_update(self):
         """ Assigns Local network weights to target network weights
         """
-        target_parameters = list(self.target_network.parameters())
-        local_parameters = list(self.local_network.parameters())
-        for i in range(len(local_parameters)):
-            target_parameters[i].data[:] = local_parameters[i].data[:]
+        self.target_network.load_state_dict(self.local_network.state_dict())
+        self.target_network.eval()  
                 
     def save(self, path = 'checkpoint.pth'):
         """Saves the network

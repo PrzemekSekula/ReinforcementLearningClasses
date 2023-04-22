@@ -96,7 +96,7 @@ class Agent():
         states, actions, rewards, next_states, dones = experiences
 
         # Get max predicted Q values (for next states) from target model
-        Q_targets_next = self.qnetwork(next_states).detach().max(1)[0].unsqueeze(1)
+        Q_targets_next = self.qnetwork(next_states).detach().max(dim=1, keepdim=True)[0]
         # TODO: Compute Q targets for current states 
         # You can use Q_targets_next * (1 - dones) to ensure that the value of the terminal state is 0
         Q_targets = None # ENTER YOUR CODE HERE
