@@ -20,7 +20,8 @@ Generally speaking I am not publishing solutions here. If you need my solutions,
     - [Cart Pole](https://www.gymlibrary.dev/environments/classic_control/cart_pole/) - Basic DQN taks
     - [Mountain Car](https://www.gymlibrary.dev/environments/classic_control/mountain_car/) - Like the previous one, but with local and target neural networks
 
-
+#### Additional Content
+- `PyTorchIntro` - a gentle introduction to PyTorch
 
 
 
