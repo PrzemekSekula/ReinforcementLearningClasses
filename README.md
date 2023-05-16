@@ -18,7 +18,7 @@ Generally speaking I am not publishing solutions here. If you need my solutions,
 - `QLearning` - SARSA and Q-learning for both [Cliff Walking](https://www.gymlibrary.dev/environments/toy_text/cliff_walking/) and [Taxi](https://www.gymlibrary.dev/environments/toy_text/taxi/) environments
 - `DQLearning` - Deep Q Learning. For now it containes two notebooks (upgrades soon):
     - `00_Vanilla_DQL.ipynb` - DQL without target neural network. Uses [Cart Pole](https://www.gymlibrary.dev/environments/classic_control/cart_pole/) environment.
-    - `01_DQL_with_TargetNetwork.ipynb` - DQL with both local and target neural networks. Uses [Cart Pole](https://www.gymlibrary.dev/environments/classic_control/cart_pole/) environment and [Mountain Car](https://www.gymlibrary.dev/environments/classic_control/mountain_car/) - environment
+    - `01_DQL_with_TargetNetwork.ipynb` - DQL with both local and target neural networks. Uses [Cart Pole](https://www.gymlibrary.dev/environments/classic_control/cart_pole/) environment and [Mountain Car](https://www.gymlibrary.dev/environments/classic_control/mountain_car/) environment
 - `REINFORCE` - REINFORCE Implementation with [Cart Pole](https://www.gymlibrary.dev/environments/classic_control/cart_pole/) environment.
 
 #### Additional Content
