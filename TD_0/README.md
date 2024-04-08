@@ -24,7 +24,9 @@ You may render the environment with `env.render()`. It works as usual, but you m
 
 
 ```bash
-pip install git+https://github.com/PrzemekSekula/gym-walking.git
+git clone https://github.com/PrzemekSekula/gym-walking.git
+cd gym-walking
+pip install .
 ```
 
 ## TO DO:

@@ -36,6 +36,21 @@ env = gym.make('Walking5-v0')
 pi = lambda x: np.random.randint(2) # uniform random policy
 
 def td(pi, env, gamma=1.0, alpha=0.05, n_episodes=10, render=True):
+    """TD(0) algorithm
+    Args:
+        pi (func): policy to follow
+        env (gym.Env): Gym environment
+        gamma (float, optional): gamma parameter for td target formula.
+            Defaults to 1.0.
+        alpha (float, optional): alpha parameter for td target formula.
+            Defaults to 0.05.
+        n_episodes (int, optional): number of episodes. Defaults to 10.
+        render (bool, optional): whether to render or not. Defaults to True.
+
+    Returns:
+        list: list of state-value function values.
+    """    
+    
     # ENTER YOUR CODE HERE
     # You should return the vector of state values V
     V = None
