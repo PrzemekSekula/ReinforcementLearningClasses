@@ -55,7 +55,7 @@ def mc(pi, env, gamma=1.0, n_episodes=10, render=True):
         rewards = [] 
         
         if render:
-            env.render(V)
+            env.unwrapped.render(V)
             
         while not terminal:
             visited_states.append(state)
@@ -67,7 +67,7 @@ def mc(pi, env, gamma=1.0, n_episodes=10, render=True):
             n_visited[state] += 1
             
             if render:
-                env.render(V)
+                env.unwrapped.render(V)
         
         
         # Now the episode is done. Let's update the state values        
