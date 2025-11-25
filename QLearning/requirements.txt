@@ -1,0 +1,5 @@
+ipykernel
+tqdm
+matplotlib
+pygame
+gymnasium

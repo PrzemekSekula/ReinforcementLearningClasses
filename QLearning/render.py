@@ -8,7 +8,7 @@ Arguments:
 """
 
 import argparse
-import gym
+import gymnasium as gym
 from agents import SarsaAgent, QLearningAgent
 
 parser = argparse.ArgumentParser(
@@ -18,11 +18,11 @@ parser.add_argument(
     '-e',
     '--env',
     type=str,
-    default='CliffWalking-v0',
+    default='CliffWalking-v1',
     choices=[
-        'CliffWalking-v0',
+        'CliffWalking-v1',
         'Taxi-v3'],
-    help='Environment. One of CliffWalking-v0, Taxi-v3. Default: CliffWalking-v0')
+    help='Environment. One of CliffWalking-v1, Taxi-v3. Default: CliffWalking-v1')
 
 
 parser.add_argument('-g', '--greedy',
