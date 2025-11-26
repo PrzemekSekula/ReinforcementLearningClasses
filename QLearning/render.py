@@ -1,7 +1,7 @@
 """
 Code that renders an environment using selected agent
 Arguments:
--e --env: Environment. One of CliffWalking-v0, Taxi-v3. Default: CliffWalking-v0
+-e --env: Environment. One of CliffWalking-v1, Taxi-v3. Default: CliffWalking-v0
 -g --greedy: Choose greedy action only. Default: True
 -a --agent: Agent. One of QLearning, SARSA. Default: QLearning
 -f --filename: Filename to load Q_est from. Default: None (it is choosen by the Agent then)
