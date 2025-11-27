@@ -1,0 +1,13 @@
+ipykernel
+tqdm
+matplotlib
+gymnasium
+gymnasium[atari]
+gymnasium[accept-rom-license]
+ale-py
+autorom[accept-rom-license]
+imageio
+imageio[ffmpeg]
+scikit-image
+autorom[accept-rom-license]
+
